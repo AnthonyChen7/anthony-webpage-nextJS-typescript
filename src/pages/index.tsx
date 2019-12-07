@@ -7,13 +7,14 @@ import Head from "next/head";
 import { Menu, Segment, MenuItem } from 'semantic-ui-react';
 import {PageName,PageLabels} from 'src/constants/page-names';
 
-interface State {
-  selectedPage: PageName;
-}
-
 // https://medium.com/swlh/typing-next-js-components-using-typescript-2f1d0dc30c4c
 const Index = () => {
-  const menuItems = Array.from(PageLabels.keys()).map(pageName => <MenuItem name={PageLabels.get(pageName)}>
+  const [selectedPage, setSelectedPage] = React.useState<PageName>(PageName.ABOUT);
+  const menuItems = Array.from(PageLabels.keys()).map(pageName => 
+  <MenuItem 
+    name={PageLabels.get(pageName)}
+    active={pageName === selectedPage}
+    onClick={() => setSelectedPage(pageName)}>
     {PageLabels.get(pageName)}
   </MenuItem>);
   return (
