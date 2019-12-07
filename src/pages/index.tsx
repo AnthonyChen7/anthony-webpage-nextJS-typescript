@@ -4,18 +4,20 @@
 import * as React from 'react';
 import Link from 'next/link';
 import Head from "next/head";
+import Router from 'next/router';
 import { Menu, Segment, MenuItem } from 'semantic-ui-react';
-import {PageName,PageLabels} from 'src/constants/page-names';
+import {PageName, PageInfos, PageNameInfo} from 'src/constants/page-names';
 
 // https://medium.com/swlh/typing-next-js-components-using-typescript-2f1d0dc30c4c
+// https://fettblog.eu/typescript-react/hooks/#usestate
+// https://stackoverflow.com/questions/58173809/next-js-redirect-from-to-another-page
 const Index = () => {
   const [selectedPage, setSelectedPage] = React.useState<PageName>(PageName.ABOUT);
-  const menuItems = Array.from(PageLabels.keys()).map(pageName => 
+  const menuItems = Array.from(PageInfos.keys()).map(pageName => 
   <MenuItem 
-    name={PageLabels.get(pageName)}
+    name={ (PageInfos.get(pageName) as PageNameInfo).label}
     active={pageName === selectedPage}
-    onClick={() => setSelectedPage(pageName)}>
-    {PageLabels.get(pageName)}
+    onClick={() => {setSelectedPage(pageName); Router.push(`/${(PageInfos.get(pageName) as PageNameInfo).fileName}`);}}>
   </MenuItem>);
   return (
   
