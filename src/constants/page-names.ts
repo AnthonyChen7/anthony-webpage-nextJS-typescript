@@ -1,14 +1,9 @@
 export enum PageName {
-  ABOUT,
-  BADMINTON
+  About = 'About',
+  Badminton = 'Badminton'
 };
 
-export interface PageNameInfo {
-  label: string;
-  fileName: string;
-}
-
-export const PageInfos = new Map<PageName, PageNameInfo>([
-  [PageName.ABOUT, {label: 'About', fileName: 'about'}],
-  [PageName.BADMINTON, {label: 'Badminton', fileName: 'badminton'}]
+export const PageInfos = new Map<PageName, string>([
+  [PageName.About, 'about'],
+  [PageName.Badminton, 'badminton']
 ]);

@@ -1,8 +1,8 @@
-import Header from "src/components/Header";
+import { Header } from "src/components/Header";
 export default function Badminton() {
   return (
     <>
-    <Header />
+    {/* <Header /> */}
     <div>This is the badminton page</div>
     </>
   );
