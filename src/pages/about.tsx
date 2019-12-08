@@ -1,4 +1,4 @@
-import { Header, HeaderProps } from "src/components/Header";
+import { Header, HeaderProps } from "src/components/header";
 import { PageInfos, PageName } from "src/models/page-names";
 import Router from 'next/router';
 import { NextPageContext, NextPage } from 'next';

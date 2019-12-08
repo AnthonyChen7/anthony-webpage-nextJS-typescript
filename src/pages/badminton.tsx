@@ -1,4 +1,4 @@
-import { Header } from "src/components/Header";
+import { Header } from "src/components/header";
 import { PageInfos, PageName } from "src/models/page-names";
 import Router from "next/router";
 export default function Badminton() {
