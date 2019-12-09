@@ -3,7 +3,7 @@ import { Message } from 'semantic-ui-react'
 import Head from "next/head";
 export interface QuoteBannerProps {
   headerMsg?: string;
-  data: QuoteInfo;
+  data?: QuoteInfo;
 }
 
 export const QuoteBanner: React.SFC<QuoteBannerProps> = (props: QuoteBannerProps) => {
@@ -18,13 +18,13 @@ export const QuoteBanner: React.SFC<QuoteBannerProps> = (props: QuoteBannerProps
     <Message>
     <Message.Header>{props.headerMsg}</Message.Header>
       <p>
-        {props.data.quote}
+        {props.data && props.data.quote}
       </p>
       <p>
-        {props.data.author}
+        {props.data && props.data.author}
       </p>
       <p>
-        {props.data.source}
+        {props.data && props.data.source}
       </p>
     </Message>
     </>
