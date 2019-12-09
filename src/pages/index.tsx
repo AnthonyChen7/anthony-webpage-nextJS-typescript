@@ -15,7 +15,9 @@ interface IndexProps {
 const Index: NextPage<IndexProps> = (props) => {
   return (
     <>
-      <Layout />
+      <Layout>
+
+      </Layout>
     </>
   );
 };

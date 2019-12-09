@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Menu, MenuItem } from 'semantic-ui-react';
-import Head from "next/head";
 export interface HeaderProps {
   labels: string[];
   selectedLabel?: string;

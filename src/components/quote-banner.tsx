@@ -1,6 +1,5 @@
 import { QuoteInfo } from "src/models/quote-info";
 import { Message } from 'semantic-ui-react'
-import Head from "next/head";
 export interface QuoteBannerProps {
   headerMsg?: string;
   data?: QuoteInfo;
