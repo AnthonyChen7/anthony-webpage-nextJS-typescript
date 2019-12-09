@@ -9,12 +9,6 @@ export interface QuoteBannerProps {
 export const QuoteBanner: React.SFC<QuoteBannerProps> = (props: QuoteBannerProps) => {
   return (
     <>
-    <Head>
-      <link
-        rel="stylesheet"
-        href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.css"
-      />
-    </Head>
     <Message>
     <Message.Header>{props.headerMsg}</Message.Header>
       <p>
